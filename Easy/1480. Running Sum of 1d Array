@@ -1,0 +1,16 @@
+class Solution(object):
+    def runningSum(self, nums):
+        newnums = []
+        for n in range(len(nums)):
+            count = 0
+            index = 0
+            while index < n:
+                count += nums[index]
+                index +=1
+            newnums.append(nums[n] + count)
+        return newnums
+        """
+        :type nums: List[int]
+        :rtype: List[int]
+        """
+        
