@@ -1,0 +1,13 @@
+class Solution(object):
+    def findPermutationDifference(self, s, t):
+        value = 0
+        for n in range(len(s)):
+            value += abs(n - t.index(s[n]))
+        return value
+            
+        """
+        :type s: str
+        :type t: str
+        :rtype: int
+        """
+        
