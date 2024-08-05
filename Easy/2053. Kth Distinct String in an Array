@@ -1,0 +1,11 @@
+class Solution:
+    def kthDistinct(self, arr: List[str], k: int) -> str:
+
+        dist_ele = []
+        for i in range(len(arr)):
+            if arr.count(arr[i]) == 1:
+                dist_ele.append(arr[i])
+        
+        if (k-1 < len(dist_ele)):
+            return dist_ele[k-1]
+        return ""
