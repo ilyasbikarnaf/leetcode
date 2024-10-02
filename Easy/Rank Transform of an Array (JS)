@@ -1,0 +1,22 @@
+/**
+ * @param {number[]} arr
+ * @return {number[]}
+ */
+var arrayRankTransform = function(arr) {
+    let beforeSort = arr.map(a=> a)
+    let ranksObj = {}
+    let rank = 2
+    arr.sort((a,b) => a-b)
+    ranksObj[arr[0]] = 1
+
+    for (let i = 1 ; i < arr.length ; i++ ){
+        if(arr[i] > arr[i-1]){
+            ranksObj[arr[i]] = rank
+            rank++
+        }
+    }
+
+    return beforeSort.map(a => ranksObj[a])
+
+};
+
