@@ -1,0 +1,35 @@
+/**
+ * @param {number[]} nums1
+ * @param {number} m
+ * @param {number[]} nums2
+ * @param {number} n
+ * @return {void} Do not return anything, modify nums1 in-place instead.
+ */
+var merge = function(nums1, m, nums2, n) {
+    let firstArr = 0
+    let secondArr = 0
+    let sorted = []
+    while(firstArr < m && secondArr < n) {
+        if (nums1[firstArr] < nums2[secondArr]) {
+            sorted.push(nums1[firstArr])
+            firstArr++
+        } else {
+            sorted.push(nums2[secondArr])
+            secondArr++
+        }
+    }
+    
+    while (firstArr < m) {
+        sorted.push(nums1[firstArr])
+        firstArr++
+    }
+
+    while (secondArr < n) {
+        sorted.push(nums2[secondArr])
+        secondArr++
+    }
+
+    for (let i = 0 ; i < sorted.length ; i++) {
+        nums1[i] = sorted[i]
+    }
+};
