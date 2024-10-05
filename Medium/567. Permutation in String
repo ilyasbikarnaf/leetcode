@@ -1,0 +1,35 @@
+/**
+ * @param {string} s1
+ * @param {string} s2
+ * @return {boolean}
+ */
+var checkInclusion = function(s1, s2) {
+    if (s2.length < s1.length) return false
+    let truthness = true
+
+    for (let i = 0 ; i < s2.length - s1.length +1 ; i++ ){
+        truthness = true
+        let obj = {}
+
+        let newStr = s2.slice(i, i + s1.length) 
+        for (let letter of newStr){
+            obj[letter] = (obj[letter] || 0) + 1
+        }
+
+    for (let letter of s1) {
+        if (!obj[letter]){
+            truthness = false
+
+            break;
+        } else {
+            obj[letter] = obj[letter] - 1
+
+        }
+    }
+    if (truthness) return true
+
+    }
+
+    return false
+
+};
