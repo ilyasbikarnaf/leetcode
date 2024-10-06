@@ -1,0 +1,20 @@
+/**
+ * @param {string} sentence1
+ * @param {string} sentence2
+ * @return {boolean}
+ */
+var areSentencesSimilar = function(sentence1, sentence2) {
+    let s1 = sentence1.split(' ')
+    let s2 = sentence2.split(' ')
+    let smallest_length = (s1.length < s2.length ? s1.length : s2.length)   
+    let i = 0 , j = 0;
+
+    while(i < smallest_length && s1[i] === s2[i]) {
+        i++
+    }
+    while( j < smallest_length && s1[s1.length - 1 - j] === s2[s2.length - 1 - j]) {
+        j++
+    }
+
+    return i+j >= smallest_length
+};
