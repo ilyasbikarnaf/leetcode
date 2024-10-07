@@ -1,0 +1,19 @@
+/**
+ * @param {string} s
+ * @return {number}
+ */
+var minLength = function(s) {
+    while(s) {
+        if(s.includes('AB')){
+            s = s.replace('AB', '')
+            console.log(s)
+            continue
+        } else if (s.includes('CD')) {
+           s =  s.replace('CD','')
+            continue
+        } else break
+    }
+
+    return s.length
+    
+};
