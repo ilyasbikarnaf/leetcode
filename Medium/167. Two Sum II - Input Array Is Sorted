@@ -1,0 +1,26 @@
+/**
+ * @param {number[]} numbers
+ * @param {number} target
+ * @return {number[]}
+ */
+var twoSum = function(numbers, target) {
+    let i = 0, j = numbers.length - 1;
+    let current = numbers[i] + numbers[j]
+
+    while (i < j) {
+        if (current < target) {
+            i++;
+            current = numbers[i] + numbers[j]
+        }
+        else if (current> target ) {
+            j--
+            current = numbers[i] + numbers[j]
+        }
+        else {
+            return [i+1, j+1]
+        }
+
+    }
+
+  return false  
+};
