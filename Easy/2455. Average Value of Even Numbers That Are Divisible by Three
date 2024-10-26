@@ -1,0 +1,11 @@
+/**
+ * @param {number[]} nums
+ * @return {number}
+ */
+var averageValue = function(nums) {
+    let filteredNums = nums.filter(curr => curr%2===0 && curr%3===0) 
+    if (filteredNums.length === 0) return 0
+
+    return Math.floor(filteredNums.reduce((acc, curr) => acc+curr)/filteredNums.length)
+    
+};
