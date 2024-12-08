@@ -1,0 +1,15 @@
+/**
+ * @param {string} s
+ * @return {string}
+ */
+var reverseWords = function(s) {
+    const splittedWords = s.split(' ')
+    const reversedWord = []
+
+    for (let word of splittedWords) {
+        reversedWord.push(word.split('').reverse().join(''))
+    }
+
+    return reversedWord.join(' ')
+
+};
