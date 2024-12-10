@@ -1,3 +1,4 @@
+//Python
 class Solution:
     def findGCD(self, nums: List[int]) -> int:
         gcd = 0
@@ -7,3 +8,26 @@ class Solution:
                 gcd = i
         return gcd
         
+
+//Javascript
+/**
+ * @param {number[]} nums
+ * @return {number}
+ */
+var findGCD = function(nums) {
+    nums.sort((a,b) => a-b)
+    let max = nums[nums.length - 1]
+    let min = nums[0]
+
+    function pgcd(max, min) {
+        if (max%min === 0) {
+            return min
+        }
+        return pgcd(min , max%min)
+    }
+
+    return pgcd(max, min)
+    
+
+
+};
