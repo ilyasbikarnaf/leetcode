@@ -1,0 +1,19 @@
+/**
+ * @param {number[]} gifts
+ * @param {number} k
+ * @return {number}
+ */
+var pickGifts = function(gifts, k) {
+    gifts.sort((a,b)=> b-a)
+    const newArray = []
+
+    for (let i = 1 ; i <= k; i++) {
+        maximum = Math.max(...gifts)
+        maximumIdx = gifts.findIndex(gift => gift === maximum)
+
+        gifts[maximumIdx] = Math.floor(Math.sqrt(maximum))
+
+    }
+
+    return gifts.reduce((acc, curr) => acc+curr, 0)
+};
