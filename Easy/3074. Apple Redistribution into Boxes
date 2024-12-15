@@ -1,0 +1,20 @@
+/**
+ * @param {number[]} apple
+ * @param {number[]} capacity
+ * @return {number}
+ */
+var minimumBoxes = function(apple, capacity) {
+    let i =0
+    let capacityNeeded = 0
+    let applesTotal = apple.reduce((acc, curr) => acc + curr)
+    capacity.sort((a,b) => b-a)
+
+
+    for (i ; applesTotal > capacityNeeded ; i++) {
+        capacityNeeded += capacity[i]
+
+    }
+
+    return i
+
+};
