@@ -5,3 +5,22 @@ class Solution:
             if int(citizen[11:13]) > 60:
                 seniors += 1
         return seniors
+
+
+
+/**
+ * @param {string[]} details
+ * @return {number}
+ */
+var countSeniors = function(details) {
+
+
+    let newArray = details.reduce((acc, curr) => {
+        if (+curr.slice(11,13) > 60)  {
+            return acc+ 1
+        }else return acc
+    }, 0)
+
+
+    return newArray
+};
