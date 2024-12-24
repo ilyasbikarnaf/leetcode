@@ -1,0 +1,20 @@
+/**
+ * @param {string[]} strs
+ * @return {string[][]}
+ */
+var groupAnagrams = function(strs) {
+    let groupedAnagrams = {}
+
+    for (let word of strs) {
+        let sortedWord = word.split('').sort().join() 
+
+        if (!groupedAnagrams[sortedWord]) {
+            groupedAnagrams[sortedWord] = []
+        }
+
+        groupedAnagrams[sortedWord].push(word)
+    }
+
+    return Object.values(groupedAnagrams)
+    
+};
