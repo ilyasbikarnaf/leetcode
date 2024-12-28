@@ -1,4 +1,4 @@
- class Solution:
+  class Solution:
     def heightChecker(self, heights: List[int]) -> int:
         mistaken = 0
         expected_heights = sorted(heights)
