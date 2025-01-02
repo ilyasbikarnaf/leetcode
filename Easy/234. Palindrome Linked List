@@ -14,7 +14,7 @@ var isPalindrome = function(head) {
     let array = []
     let reversedArray = []
 
-    let current = head;
+     let current = head;
     while(current) {
         array.push(current.val) 
         current = current.next
