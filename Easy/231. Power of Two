@@ -2,7 +2,7 @@
  * @param {number} n
  * @return {boolean}
  */
-var isPowerOfTwo = function(n) {
+ var isPowerOfTwo = function(n) {
     let i = 1
 
     while(i < n) {
