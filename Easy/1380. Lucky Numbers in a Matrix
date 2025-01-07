@@ -1,4 +1,4 @@
-class Solution:
+ class Solution:
     def luckyNumbers (self, matrix: List[List[int]]) -> List[int]:
          res = []
         Rows, Cols = len(matrix), len(matrix[0])
