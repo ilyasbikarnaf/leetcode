@@ -8,7 +8,7 @@
 /**
  * @param {ListNode} head
  * @return {ListNode}
- */
+ */ 
 var reverseList = function(head) {
     if (!head) return null
     let current = head
