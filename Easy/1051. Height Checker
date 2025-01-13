@@ -6,5 +6,5 @@
             if (heights[i] != expected_heights[i]):
                 mistaken += 1
         return mistaken
-
+   
         
