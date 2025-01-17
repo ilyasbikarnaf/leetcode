@@ -17,7 +17,7 @@ var finalPrices = function(prices) {
             continue
         }
 
-    pricesDiscounted.push(j >= prices.length ? prices[i] : prices[i] - prices[j])
+    pricesDiscounted.push(j >= prices.length ? prices[i] : prices[i] - prices[j]) 
     }
     
 
