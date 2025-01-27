@@ -8,3 +8,15 @@
         return mistaken
    
         
+
+////Using JS
+
+
+let mistaken = 0
+let expected_heights = heights.sort((a,b) => b-a)
+for (let i = 0 ; i < heights.length ; i++) {
+  if (heights[i] != expected_heights[i]) {
+      mistaken += 1
+}
+}
+return mistaken
