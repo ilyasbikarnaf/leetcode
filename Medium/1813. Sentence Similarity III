@@ -10,7 +10,7 @@ var areSentencesSimilar = function(sentence1, sentence2) {
     let i = 0 , j = 0;
 
     while(i < smallest_length && s1[i] === s2[i]) {
-        i++
+         i++
     }
     while( j < smallest_length && s1[s1.length - 1 - j] === s2[s2.length - 1 - j]) {
         j++
