@@ -4,7 +4,7 @@
           expected_heights = sorted(heights)
         for i in range(len(heights)):
              if (heights[i] != expected_heights[i]):
-                mistaken += 1
+                mistaken += 1 
         return mistaken
    
         
